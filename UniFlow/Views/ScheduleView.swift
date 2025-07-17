@@ -5,14 +5,15 @@
 //  Created by Алия Гумирова on 02.07.2025.
 //
 
+
 import SwiftUI
 
 struct ScheduleView: View {
     @StateObject private var viewModel = ScheduleViewModel()
-
+    
     var body: some View {
         VStack(spacing: 12) {
-            // 🖤 Заголовок "Расписание" с колокольчиком
+            // Заголовок "Расписание" с колокольчиком
             HStack {
                 Text("Расписание")
                     .font(.system(size: 36))
@@ -20,9 +21,7 @@ struct ScheduleView: View {
 
                 Spacer()
 
-                Button(action: {
-                    print("Уведомления")
-                }) {
+                NavigationLink(destination: NotificationsView()) {
                     Image(systemName: "bell")
                         .resizable()
                         .scaledToFit()
@@ -31,19 +30,13 @@ struct ScheduleView: View {
                         .frame(width: 48, height: 48)
                         .background(Color.white)
                         .clipShape(RoundedRectangle(cornerRadius: 24))
-                    
-//                    Image(systemName: "bell")
-//                        .resizable()
-//                        .scaledToFit()
-//                        .frame(width: 24, height: 24)
-//                        .foregroundColor(Color("Violet"))
                 }
             }
             .padding(.horizontal)
             .padding(.top, 16)
             .padding(.bottom, 20)
 
-            // 🟣 Верхняя панель: месяц + неделя + календарик
+            // Верхняя панель: месяц + неделя + календарик
             HStack {
                 Text(monthWeekText)
                     .font(.system(size: 16, weight: .bold))
@@ -73,7 +66,7 @@ struct ScheduleView: View {
             }
             .padding(.horizontal)
 
-            // 🔄 Линия дней с переключателями недели
+            // Линия дней с переключателями недели
             HStack {
                 Button(action: {
                     viewModel.selectedDate = viewModel.selectedDate.addingTimeInterval(-7 * 86400)
@@ -101,7 +94,7 @@ struct ScheduleView: View {
             .padding(.horizontal, 16)
             .frame(height: 72)
 
-            // 📋 Список занятий
+            //Список занятий
             ScrollView {
                 VStack(spacing: 0) {
                     if viewModel.lessonsForSelectedDate.isEmpty {
@@ -139,5 +132,7 @@ struct ScheduleView: View {
 }
 
 #Preview {
-    ScheduleView()
+    NavigationStack {
+        ScheduleView()
+    }
 }

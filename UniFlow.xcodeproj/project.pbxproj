@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE997CDB2E28E8D2005B620D /* NotificationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE997CDA2E28E8CC005B620D /* NotificationItem.swift */; };
+		CE997CDD2E28E8E5005B620D /* NotificationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE997CDC2E28E8E3005B620D /* NotificationsViewModel.swift */; };
+		CE997CDF2E28E8F3005B620D /* NotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE997CDE2E28E8F2005B620D /* NotificationsView.swift */; };
+		CE997CE12E28E90F005B620D /* NotificationCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE997CE02E28E901005B620D /* NotificationCellView.swift */; };
+		CE997CE72E28EFF6005B620D /* LectureReviewCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE997CE62E28EFF4005B620D /* LectureReviewCellView.swift */; };
+		CE997CE92E28F3D1005B620D /* LectureRatingSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE997CE82E28F3D0005B620D /* LectureRatingSheetView.swift */; };
 		CEBBD1EF2E155A7D00B10CC4 /* UniFlowApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBBD1EE2E155A7D00B10CC4 /* UniFlowApp.swift */; };
 		CEBBD1F12E155A7D00B10CC4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBBD1F02E155A7D00B10CC4 /* ContentView.swift */; };
 		CEBBD1F32E155A8300B10CC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEBBD1F22E155A8300B10CC4 /* Assets.xcassets */; };
@@ -21,6 +27,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE997CDA2E28E8CC005B620D /* NotificationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationItem.swift; sourceTree = "<group>"; };
+		CE997CDC2E28E8E3005B620D /* NotificationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewModel.swift; sourceTree = "<group>"; };
+		CE997CDE2E28E8F2005B620D /* NotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsView.swift; sourceTree = "<group>"; };
+		CE997CE02E28E901005B620D /* NotificationCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCellView.swift; sourceTree = "<group>"; };
+		CE997CE62E28EFF4005B620D /* LectureReviewCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LectureReviewCellView.swift; sourceTree = "<group>"; };
+		CE997CE82E28F3D0005B620D /* LectureRatingSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LectureRatingSheetView.swift; sourceTree = "<group>"; };
 		CEBBD1EB2E155A7D00B10CC4 /* UniFlow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UniFlow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEBBD1EE2E155A7D00B10CC4 /* UniFlowApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniFlowApp.swift; sourceTree = "<group>"; };
 		CEBBD1F02E155A7D00B10CC4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -89,6 +101,7 @@
 		CEBBD1FC2E155A9100B10CC4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				CE997CDA2E28E8CC005B620D /* NotificationItem.swift */,
 				CEBBD2012E155B3A00B10CC4 /* Lesson.swift */,
 			);
 			path = Models;
@@ -97,6 +110,7 @@
 		CEBBD1FD2E155AA200B10CC4 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				CE997CDC2E28E8E3005B620D /* NotificationsViewModel.swift */,
 				CEBBD2062E155B9B00B10CC4 /* ScheduleViewModel.swift */,
 			);
 			path = ViewModels;
@@ -105,6 +119,10 @@
 		CEBBD1FE2E155B0600B10CC4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CE997CE82E28F3D0005B620D /* LectureRatingSheetView.swift */,
+				CE997CE62E28EFF4005B620D /* LectureReviewCellView.swift */,
+				CE997CE02E28E901005B620D /* NotificationCellView.swift */,
+				CE997CDE2E28E8F2005B620D /* NotificationsView.swift */,
 				CEBBD20D2E155CD000B10CC4 /* ScheduleView.swift */,
 				CEBBD20F2E155E0D00B10CC4 /* MainTabView.swift */,
 			);
@@ -211,10 +229,16 @@
 				CEBBD2102E155E0D00B10CC4 /* MainTabView.swift in Sources */,
 				CEBBD2052E155B7D00B10CC4 /* Date+Utils.swift in Sources */,
 				CEBBD1F12E155A7D00B10CC4 /* ContentView.swift in Sources */,
+				CE997CDD2E28E8E5005B620D /* NotificationsViewModel.swift in Sources */,
 				CEBBD2072E155B9B00B10CC4 /* ScheduleViewModel.swift in Sources */,
+				CE997CE72E28EFF6005B620D /* LectureReviewCellView.swift in Sources */,
 				CEBBD20E2E155CD000B10CC4 /* ScheduleView.swift in Sources */,
+				CE997CDB2E28E8D2005B620D /* NotificationItem.swift in Sources */,
+				CE997CE92E28F3D1005B620D /* LectureRatingSheetView.swift in Sources */,
 				CEBBD2092E155BDD00B10CC4 /* LessonCardView.swift in Sources */,
 				CEBBD1EF2E155A7D00B10CC4 /* UniFlowApp.swift in Sources */,
+				CE997CE12E28E90F005B620D /* NotificationCellView.swift in Sources */,
+				CE997CDF2E28E8F3005B620D /* NotificationsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
