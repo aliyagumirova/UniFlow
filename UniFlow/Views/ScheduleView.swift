@@ -7,9 +7,40 @@
 
 
 import SwiftUI
+import CoreData
 
 struct ScheduleView: View {
-    @StateObject private var viewModel = ScheduleViewModel()
+    @Environment(\.managedObjectContext) private var viewContext
+    
+    private let networkService = NetworkService()
+    
+    private var persistentContainer: NSPersistentContainer {
+        let container = NSPersistentContainer(name: "Model")
+        container.loadPersistentStores { _, error in
+            if let error = error as NSError? {
+                fatalError("Unresolved error \(error), \(error.userInfo)")
+            }
+        }
+        return container
+    }
+    
+    private var eventManager: EventManager {
+        EventManager(container: persistentContainer)
+    }
+    
+    @StateObject private var viewModel: ScheduleViewModel
+    
+    init() {
+        let networkService = NetworkService()
+        let persistentContainer = NSPersistentContainer(name: "Model")
+        persistentContainer.loadPersistentStores { _, error in
+            if let error = error as NSError? {
+                fatalError("Unresolved error \(error), \(error.userInfo)")
+            }
+        }
+        let eventManager = EventManager(container: persistentContainer)
+        _viewModel = StateObject(wrappedValue: ScheduleViewModel(networkService: networkService, eventManager: eventManager))
+    }
     
     var body: some View {
         VStack(spacing: 12) {

@@ -8,59 +8,56 @@
 import Foundation
 
 final class ScheduleViewModel: ObservableObject {
+    private let networkService: NetworkProtocol
+    private let eventManager: ManagerProtocol
+
+    @Published private(set) var events: [Event] = []
     @Published var selectedDate: Date = Date()
-    @Published var lessons: [Date: [Lesson]] = [:]
-
-    init() {
-        generateMockData()
+    
+    init(networkService: NetworkProtocol, eventManager: ManagerProtocol) {
+        self.networkService = networkService
+        self.eventManager = eventManager
+        loadEvents()
     }
 
-    var lessonsForSelectedDate: [Lesson] {
-        lessons[selectedDate.stripTime()] ?? []
-    }
+    func loadEvents() {
+           // Сначала пробуем загрузить из базы
+           eventManager.fetch(of: Event.self) { [weak self] localEvents in
+               guard let self = self else { return }
+               if localEvents.isEmpty {
+                   // Если пусто — грузим из сети
+                   self.networkService.getData(of: EventsDTO.self, endpoint: .getEvents) { result in
+                       switch result {
+                       case .success(let dtos):
+                           // Сохраняем в базу
+                           self.eventManager.createEvent(from: dtos) { saveResult in
+                               switch saveResult {
+                               case .success(let savedEvents):
+                                   DispatchQueue.main.async {
+                                       self.events = savedEvents
+                                   }
+                               case .failure(let error):
+                                   print("Save error: \(error)")
+                               }
+                           }
+                       case .failure(let error):
+                           print("Network error: \(error)")
+                       }
+                   }
+               } else {
+                   // Если не пусто — используем локальные
+                   DispatchQueue.main.async {
+                       self.events = localEvents
+                   }
+               }
+           }
+       }
 
-    private func generateMockData() {
-        let today = Date().stripTime()
-        lessons[today] = [
-            Lesson(title: "Иностранный язык в профессиональной деятельности",
-                   teacher: "Константинопольский К.К.",
-                   type: .lecture,
-                   format: .offline,
-                   status: .active,
-                   time: "10:45 — 12:20",
-                   room: "209 ауд."),
-            
-            Lesson(title: "Иностранный язык в профессиональной деятельности",
-                   teacher: "Константинопольский К.К.",
-                   type: .lecture,
-                   format: .offline,
-                   status: .cancelled,
-                   time: "12:45 — 13:20",
-                   room: nil),
-            
-            Lesson(title: "Иностранный язык в профессиональной деятельности",
-                   teacher: "Константинопольский К.К.",
-                   type: .lecture,
-                   format: .online,
-                   status: .active,
-                   time: "13:45 — 14:20",
-                   room: nil),
-            
-            Lesson(title: "Иностранный язык в профессиональной деятельности",
-                   teacher: "Константинопольский К.К.",
-                   type: .lecture,
-                   format: .offline,
-                   status: .replacement,
-                   time: "14:45 — 15:20",
-                   room: "209 ауд."),
-            
-            Lesson(title: "Иностранный язык в профессиональной деятельности",
-                   teacher: "Константинопольский К.К.",
-                   type: .lecture,
-                   format: .offline,
-                   status: .replacement,
-                   time: "15:45 — 16®:20",
-                   room: "209 ауд.")
-        ]
+    var lessonsForSelectedDate: [Event] {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        let selected = formatter.string(from: selectedDate)
+        return events.filter { $0.date == selected }
     }
 }
+

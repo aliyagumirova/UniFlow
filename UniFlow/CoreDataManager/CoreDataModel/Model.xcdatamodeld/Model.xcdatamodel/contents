@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="23605" systemVersion="24B83" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithSwiftData="YES" userDefinedModelVersionIdentifier="">
+    <entity name="Event" representedClassName="Event" syncable="YES">
+        <attribute name="class_code" optional="YES" attributeType="String"/>
+        <attribute name="classroom" optional="YES" attributeType="String"/>
+        <attribute name="date" optional="YES" attributeType="String"/>
+        <attribute name="delivery_mode" optional="YES" attributeType="String"/>
+        <attribute name="descriptions" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="instructor_name" optional="YES" attributeType="String"/>
+        <attribute name="is_cancelled" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="session_type" optional="YES" attributeType="String"/>
+        <attribute name="time_range" optional="YES" attributeType="String"/>
+    </entity>
+</model>
