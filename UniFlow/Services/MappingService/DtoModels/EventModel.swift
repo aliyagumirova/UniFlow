@@ -49,6 +49,4 @@ extension EventsDTO: MappableProtocol {
     }
     
     typealias Entity = Event
-    
-    
 }

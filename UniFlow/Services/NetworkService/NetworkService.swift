@@ -25,21 +25,35 @@ final class NetworkService: NetworkProtocol {
                         completion(.success(value))
                     }
                 case .failure(let error):
-                    let networkError: NetworkError
-                    if let statusCode = response.response?.statusCode {
-                        switch statusCode {
-                        case 400...500:
-                            networkError = .serverError(statusCode)
-                        case 500...599:
-                            networkError = .serverError(statusCode)
-                        default:
-                            networkError = .unknown
-                        }
-                    } else {
-                        networkError = .unknown
-                    }
-                    completion(.failure(networkError))
-                    print(error.localizedDescription)
+                    let statusCode = response.response?.statusCode ?? -1
+                       let networkError: NetworkError
+                       switch statusCode {
+                       case 400...499:
+                           networkError = .clientError(statusCode)
+                       case 500...599:
+                           networkError = .serverError(statusCode)
+                       default:
+                           networkError = .unknown
+                       }
+
+                       if let data = response.data,
+                          let body = String(data: data, encoding: .utf8) {
+                           print("Body: \(body)")
+                       }
+
+                       if let afErr = error.asAFError {
+                           switch afErr {
+                           case .responseSerializationFailed(let reason):
+                               print("Decoding error: \(reason)")
+                           default:
+                               break
+                           }
+                       }
+
+                       print("Detailed error: \(networkError) — \(error.localizedDescription)")
+                       DispatchQueue.main.async {
+                           completion(.failure(networkError))
+                       }
                 }
             }
     }

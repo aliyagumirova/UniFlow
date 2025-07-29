@@ -9,6 +9,7 @@ import Foundation
 
 enum NetworkError: LocalizedError {
     case invalidURL
+    case clientError(Int)
     case serverError(Int)
     case unknown
     
@@ -16,6 +17,8 @@ enum NetworkError: LocalizedError {
         switch self {
         case .invalidURL:
             return "Неверный URL"
+        case .clientError(let code):
+            return "Клиент вернул ошибку с кодом: \(code)"
         case .serverError(let code):
             return "Сервер вернул ошибку с кодом: \(code)"
         case .unknown:
