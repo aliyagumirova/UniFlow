@@ -10,10 +10,12 @@ import SwiftUI
 struct MainTabView: View {
     var body: some View {
         TabView {
-            ScheduleView()
-                .tabItem {
-                    Label("Расписание", systemImage: "calendar")
-                }
+            NavigationStack {
+                ScheduleView()
+            }
+            .tabItem {
+                Label("Расписание", systemImage: "calendar")
+            }
 
             Text("Оценки")
                 .tabItem {
@@ -27,6 +29,7 @@ struct MainTabView: View {
         }
     }
 }
+
 
 #Preview {
     MainTabView()

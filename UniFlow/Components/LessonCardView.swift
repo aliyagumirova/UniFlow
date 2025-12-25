@@ -7,6 +7,7 @@
 import SwiftUI
 
 struct LessonCardView: View {
+    // UI делает авто инит под структуру каждого нового объекта?
     let lesson: Lesson
 
     var body: some View {
@@ -19,37 +20,34 @@ struct LessonCardView: View {
                 
                 Spacer()
                 
-                if lesson.status == .cancelled {
-                    Text("Занятие отменено")
-                        .font(.caption)
-                        .padding(.horizontal, 8)
-                        .padding(.vertical, 4)
-                        .background(Color.red.opacity(0.1))
-                        .foregroundColor(.red)
-                        .cornerRadius(8)
-                } else if lesson.status == .replacement {
-                    Text("Замена")
-                        .font(.caption)
-                        .padding(.horizontal, 8)
-                        .padding(.vertical, 4)
-                        .background(Color.green.opacity(0.15))
-                        .foregroundColor(.green)
-                        .cornerRadius(8)
-                } else if lesson.format == .online {
-                    Text("Online")
-                        .font(.caption)
-                        .foregroundColor(.gray)
-                } else if lesson.format == .offline {
-                    
-                    // Аудитория
-                    if let room = lesson.room, lesson.format == .offline {
-                        Text(room)
-                            .font(.subheadline)
-                            .foregroundColor(.primary)
+                // Надо менять в зависимости от бека
+                if lesson.status {
+                   if lesson.format.lowercased() == "online" {
+                       Text("Online")
+                           .font(.caption)
+                           .foregroundColor(.gray)
+                   } else if lesson.format.lowercased() == "offline" {
+                       if let room = lesson.room {
+                           Text(room)
+                               .font(.subheadline)
+                               .foregroundColor(.primary)
+                       }
+                   }
+                } else {
+                    if lesson.format.lowercased() == "Замена" {
+                        Text("Online")
+                            .font(.caption)
+                            .foregroundColor(.gray)
+                    } else {
+                        Text("Занятие отменено")
+                            .font(.caption)
+                            .padding(.horizontal, 8)
+                            .padding(.vertical, 4)
+                            .background(Color.red.opacity(0.1))
+                            .foregroundColor(.red)
+                            .cornerRadius(8)
                     }
-                    
                 }
-                
             }
             
             Divider()
@@ -68,7 +66,7 @@ struct LessonCardView: View {
                     .font(.subheadline)
                     .foregroundColor(.gray)
                 Spacer()
-                Text(lesson.type == .lecture ? "Лекция" : "Семинар")
+                Text(lesson.type)
                     .font(.subheadline)
                     .foregroundColor(.gray)
             }
@@ -87,12 +85,10 @@ struct LessonCardView: View {
 
     private func borderColor(for lesson: Lesson) -> Color {
         switch lesson.status {
-        case .active:
-            return lesson.format == .online ? Color.purple.opacity(0.3) : Color.green
-        case .cancelled:
+        case true:
+            return lesson.format == "online" ? Color.purple.opacity(0.3) : Color.green
+        case false:
             return Color.red
-        case .replacement:
-            return Color.green
         }
     }
 }
@@ -100,35 +96,7 @@ struct LessonCardView: View {
 struct LessonCardView_Previews: PreviewProvider {
     static var previews: some View {
         VStack(spacing: 16) {
-            LessonCardView(lesson: Lesson(
-                title: "Иностранный язык",
-                teacher: "Иванов И.И.",
-                type: .lecture,
-                format: .offline,
-                status: .active,
-                time: "10:45 — 12:20",
-                room: "209 ауд."
-            ))
-
-            LessonCardView(lesson: Lesson(
-                title: "Физика",
-                teacher: "Петров П.П.",
-                type: .seminar,
-                format: .online,
-                status: .cancelled,
-                time: "13:00 — 14:30",
-                room: nil
-            ))
-
-            LessonCardView(lesson: Lesson(
-                title: "Математика",
-                teacher: "Сидоров С.С.",
-                type: .lecture,
-                format: .offline,
-                status: .replacement,
-                time: "15:00 — 16:30",
-                room: "101 ауд."
-            ))
+            LessonCardView(lesson: <#T##Lesson#>)
         }
     }
 }

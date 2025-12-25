@@ -7,6 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1FF0ED002E2906020082BA73 /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF0ECFF2E2906020082BA73 /* APIEndpoint.swift */; };
+		1FF0EDBB2E2906960082BA73 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF0EDBA2E2906960082BA73 /* NetworkError.swift */; };
+		1FF0EDBD2E2906AA0082BA73 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF0EDBC2E2906AA0082BA73 /* NetworkService.swift */; };
+		1FF0EDC02E2906E00082BA73 /* NetworkProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF0EDBF2E2906E00082BA73 /* NetworkProtocol.swift */; };
+		1FF0EDC52E29363E0082BA73 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1FF0EDC32E29363E0082BA73 /* Model.xcdatamodeld */; };
+		1FF0EDC92E2937F50082BA73 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF0EDC72E2937F50082BA73 /* Event.swift */; };
+		1FF0EDCF2E2938EA0082BA73 /* MappingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF0EDCE2E2938EA0082BA73 /* MappingProtocol.swift */; };
+		1FF0EDD12E2938F90082BA73 /* EventsMapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF0EDD02E2938F90082BA73 /* EventsMapping.swift */; };
+		1FF0EDD52E2939400082BA73 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 1FF0EDD42E2939400082BA73 /* Alamofire */; };
+		1FF0EDD72E293A4B0082BA73 /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF0EDD62E293A4B0082BA73 /* EventModel.swift */; };
+		1FF0EDDC2E294CDB0082BA73 /* ManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF0EDDB2E294CDB0082BA73 /* ManagerProtocol.swift */; };
+		1FF0EDDE2E294D090082BA73 /* EventManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF0EDDD2E294D090082BA73 /* EventManager.swift */; };
+		1FF0EDE22E294E0A0082BA73 /* MappableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF0EDE12E294E0A0082BA73 /* MappableProtocol.swift */; };
+		CE997CDB2E28E8D2005B620D /* NotificationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE997CDA2E28E8CC005B620D /* NotificationItem.swift */; };
+		CE997CDD2E28E8E5005B620D /* NotificationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE997CDC2E28E8E3005B620D /* NotificationsViewModel.swift */; };
+		CE997CDF2E28E8F3005B620D /* NotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE997CDE2E28E8F2005B620D /* NotificationsView.swift */; };
+		CE997CE12E28E90F005B620D /* NotificationCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE997CE02E28E901005B620D /* NotificationCellView.swift */; };
+		CE997CE72E28EFF6005B620D /* LectureReviewCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE997CE62E28EFF4005B620D /* LectureReviewCellView.swift */; };
+		CE997CE92E28F3D1005B620D /* LectureRatingSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE997CE82E28F3D0005B620D /* LectureRatingSheetView.swift */; };
 		CEBBD1EF2E155A7D00B10CC4 /* UniFlowApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBBD1EE2E155A7D00B10CC4 /* UniFlowApp.swift */; };
 		CEBBD1F12E155A7D00B10CC4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBBD1F02E155A7D00B10CC4 /* ContentView.swift */; };
 		CEBBD1F32E155A8300B10CC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEBBD1F22E155A8300B10CC4 /* Assets.xcassets */; };
@@ -21,6 +40,24 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1FF0ECFF2E2906020082BA73 /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
+		1FF0EDBA2E2906960082BA73 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		1FF0EDBC2E2906AA0082BA73 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		1FF0EDBF2E2906E00082BA73 /* NetworkProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProtocol.swift; sourceTree = "<group>"; };
+		1FF0EDC42E29363E0082BA73 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		1FF0EDC72E2937F50082BA73 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		1FF0EDCE2E2938EA0082BA73 /* MappingProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MappingProtocol.swift; sourceTree = "<group>"; };
+		1FF0EDD02E2938F90082BA73 /* EventsMapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsMapping.swift; sourceTree = "<group>"; };
+		1FF0EDD62E293A4B0082BA73 /* EventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
+		1FF0EDDB2E294CDB0082BA73 /* ManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerProtocol.swift; sourceTree = "<group>"; };
+		1FF0EDDD2E294D090082BA73 /* EventManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventManager.swift; sourceTree = "<group>"; };
+		1FF0EDE12E294E0A0082BA73 /* MappableProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MappableProtocol.swift; sourceTree = "<group>"; };
+		CE997CDA2E28E8CC005B620D /* NotificationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationItem.swift; sourceTree = "<group>"; };
+		CE997CDC2E28E8E3005B620D /* NotificationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewModel.swift; sourceTree = "<group>"; };
+		CE997CDE2E28E8F2005B620D /* NotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsView.swift; sourceTree = "<group>"; };
+		CE997CE02E28E901005B620D /* NotificationCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCellView.swift; sourceTree = "<group>"; };
+		CE997CE62E28EFF4005B620D /* LectureReviewCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LectureReviewCellView.swift; sourceTree = "<group>"; };
+		CE997CE82E28F3D0005B620D /* LectureRatingSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LectureRatingSheetView.swift; sourceTree = "<group>"; };
 		CEBBD1EB2E155A7D00B10CC4 /* UniFlow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UniFlow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEBBD1EE2E155A7D00B10CC4 /* UniFlowApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniFlowApp.swift; sourceTree = "<group>"; };
 		CEBBD1F02E155A7D00B10CC4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -40,12 +77,111 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FF0EDD52E2939400082BA73 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1FF0ECFE2E2905EB0082BA73 /* NetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				1FF0EDBE2E2906CC0082BA73 /* Protocol */,
+				1FF0ECFF2E2906020082BA73 /* APIEndpoint.swift */,
+				1FF0EDBA2E2906960082BA73 /* NetworkError.swift */,
+				1FF0EDBC2E2906AA0082BA73 /* NetworkService.swift */,
+			);
+			path = NetworkService;
+			sourceTree = "<group>";
+		};
+		1FF0EDBE2E2906CC0082BA73 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				1FF0EDBF2E2906E00082BA73 /* NetworkProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		1FF0EDC12E29361F0082BA73 /* CoreDataManager */ = {
+			isa = PBXGroup;
+			children = (
+				1FF0EDD82E294CB80082BA73 /* Managers */,
+				1FF0EDC22E2936280082BA73 /* CoreDataModel */,
+				1FF0EDCA2E2938070082BA73 /* Entities */,
+			);
+			path = CoreDataManager;
+			sourceTree = "<group>";
+		};
+		1FF0EDC22E2936280082BA73 /* CoreDataModel */ = {
+			isa = PBXGroup;
+			children = (
+				1FF0EDC32E29363E0082BA73 /* Model.xcdatamodeld */,
+			);
+			path = CoreDataModel;
+			sourceTree = "<group>";
+		};
+		1FF0EDCA2E2938070082BA73 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				1FF0EDC72E2937F50082BA73 /* Event.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		1FF0EDCB2E2938AB0082BA73 /* MappingService */ = {
+			isa = PBXGroup;
+			children = (
+				1FF0EDCD2E2938D20082BA73 /* Mapping */,
+				1FF0EDCC2E2938C80082BA73 /* Protocol */,
+				CEBBD1FC2E155A9100B10CC4 /* DtoModels */,
+			);
+			path = MappingService;
+			sourceTree = "<group>";
+		};
+		1FF0EDCC2E2938C80082BA73 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				1FF0EDCE2E2938EA0082BA73 /* MappingProtocol.swift */,
+				1FF0EDE12E294E0A0082BA73 /* MappableProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		1FF0EDCD2E2938D20082BA73 /* Mapping */ = {
+			isa = PBXGroup;
+			children = (
+				1FF0EDD02E2938F90082BA73 /* EventsMapping.swift */,
+			);
+			path = Mapping;
+			sourceTree = "<group>";
+		};
+		1FF0EDD22E2939000082BA73 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				1FF0EDCB2E2938AB0082BA73 /* MappingService */,
+				1FF0ECFE2E2905EB0082BA73 /* NetworkService */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		1FF0EDD82E294CB80082BA73 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				1FF0EDD92E294CC90082BA73 /* Protocol */,
+				1FF0EDDD2E294D090082BA73 /* EventManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		1FF0EDD92E294CC90082BA73 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				1FF0EDDB2E294CDB0082BA73 /* ManagerProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
 		CEBBD1E22E155A7D00B10CC4 = {
 			isa = PBXGroup;
 			children = (
@@ -65,11 +201,12 @@
 		CEBBD1ED2E155A7D00B10CC4 /* UniFlow */ = {
 			isa = PBXGroup;
 			children = (
+				1FF0EDC12E29361F0082BA73 /* CoreDataManager */,
 				CEBBD2002E155B1800B10CC4 /* Resources */,
 				CEBBD1FF2E155B1100B10CC4 /* Components */,
 				CEBBD1FE2E155B0600B10CC4 /* Views */,
 				CEBBD1FD2E155AA200B10CC4 /* ViewModels */,
-				CEBBD1FC2E155A9100B10CC4 /* Models */,
+				1FF0EDD22E2939000082BA73 /* Services */,
 				CEBBD1EE2E155A7D00B10CC4 /* UniFlowApp.swift */,
 				CEBBD1F02E155A7D00B10CC4 /* ContentView.swift */,
 				CEBBD1F22E155A8300B10CC4 /* Assets.xcassets */,
@@ -86,17 +223,20 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		CEBBD1FC2E155A9100B10CC4 /* Models */ = {
+		CEBBD1FC2E155A9100B10CC4 /* DtoModels */ = {
 			isa = PBXGroup;
 			children = (
+				CE997CDA2E28E8CC005B620D /* NotificationItem.swift */,
 				CEBBD2012E155B3A00B10CC4 /* Lesson.swift */,
+				1FF0EDD62E293A4B0082BA73 /* EventModel.swift */,
 			);
-			path = Models;
+			path = DtoModels;
 			sourceTree = "<group>";
 		};
 		CEBBD1FD2E155AA200B10CC4 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				CE997CDC2E28E8E3005B620D /* NotificationsViewModel.swift */,
 				CEBBD2062E155B9B00B10CC4 /* ScheduleViewModel.swift */,
 			);
 			path = ViewModels;
@@ -105,6 +245,10 @@
 		CEBBD1FE2E155B0600B10CC4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CE997CE82E28F3D0005B620D /* LectureRatingSheetView.swift */,
+				CE997CE62E28EFF4005B620D /* LectureReviewCellView.swift */,
+				CE997CE02E28E901005B620D /* NotificationCellView.swift */,
+				CE997CDE2E28E8F2005B620D /* NotificationsView.swift */,
 				CEBBD20D2E155CD000B10CC4 /* ScheduleView.swift */,
 				CEBBD20F2E155E0D00B10CC4 /* MainTabView.swift */,
 			);
@@ -180,6 +324,9 @@
 				Base,
 			);
 			mainGroup = CEBBD1E22E155A7D00B10CC4;
+			packageReferences = (
+				1FF0EDD32E2939400082BA73 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = CEBBD1EC2E155A7D00B10CC4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -206,15 +353,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FF0EDE22E294E0A0082BA73 /* MappableProtocol.swift in Sources */,
+				1FF0EDBB2E2906960082BA73 /* NetworkError.swift in Sources */,
 				CEBBD20B2E155C9800B10CC4 /* WeekdaySelectorView.swift in Sources */,
 				CEBBD2022E155B3A00B10CC4 /* Lesson.swift in Sources */,
 				CEBBD2102E155E0D00B10CC4 /* MainTabView.swift in Sources */,
+				1FF0EDC52E29363E0082BA73 /* Model.xcdatamodeld in Sources */,
+				1FF0EDDC2E294CDB0082BA73 /* ManagerProtocol.swift in Sources */,
+				1FF0EDBD2E2906AA0082BA73 /* NetworkService.swift in Sources */,
 				CEBBD2052E155B7D00B10CC4 /* Date+Utils.swift in Sources */,
+				1FF0EDC02E2906E00082BA73 /* NetworkProtocol.swift in Sources */,
 				CEBBD1F12E155A7D00B10CC4 /* ContentView.swift in Sources */,
+				CE997CDD2E28E8E5005B620D /* NotificationsViewModel.swift in Sources */,
+				1FF0EDCF2E2938EA0082BA73 /* MappingProtocol.swift in Sources */,
+				1FF0EDDE2E294D090082BA73 /* EventManager.swift in Sources */,
 				CEBBD2072E155B9B00B10CC4 /* ScheduleViewModel.swift in Sources */,
+				1FF0EDD72E293A4B0082BA73 /* EventModel.swift in Sources */,
+				1FF0ED002E2906020082BA73 /* APIEndpoint.swift in Sources */,
+				CE997CE72E28EFF6005B620D /* LectureReviewCellView.swift in Sources */,
+				1FF0EDC92E2937F50082BA73 /* Event.swift in Sources */,
 				CEBBD20E2E155CD000B10CC4 /* ScheduleView.swift in Sources */,
+				1FF0EDD12E2938F90082BA73 /* EventsMapping.swift in Sources */,
+				CE997CDB2E28E8D2005B620D /* NotificationItem.swift in Sources */,
+				CE997CE92E28F3D1005B620D /* LectureRatingSheetView.swift in Sources */,
 				CEBBD2092E155BDD00B10CC4 /* LessonCardView.swift in Sources */,
 				CEBBD1EF2E155A7D00B10CC4 /* UniFlowApp.swift in Sources */,
+				CE997CE12E28E90F005B620D /* NotificationCellView.swift in Sources */,
+				CE997CDF2E28E8F3005B620D /* NotificationsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,6 +583,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1FF0EDD32E2939400082BA73 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.10.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1FF0EDD42E2939400082BA73 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1FF0EDD32E2939400082BA73 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		1FF0EDC32E29363E0082BA73 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				1FF0EDC42E29363E0082BA73 /* Model.xcdatamodel */,
+			);
+			currentVersion = 1FF0EDC42E29363E0082BA73 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = CEBBD1E32E155A7D00B10CC4 /* Project object */;
 }
